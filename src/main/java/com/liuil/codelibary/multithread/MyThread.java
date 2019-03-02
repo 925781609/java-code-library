@@ -2,16 +2,19 @@ package com.liuil.codelibary.multithread;
 
 public class MyThread extends Thread {
 
-  String name;
+  private String name;
+  private int count = 5;
 
   public MyThread(String name) {
+    super(name);
     this.name = name;
   }
 
   @Override
   public void run() {
-    for (int i = 0; i < 5; i++) {
-      System.out.println("线程" + Thread.currentThread().getName() + "卖第" + i + "张票");
+    while (count > 0) {
+      count--;
+      System.out.println("线程" + Thread.currentThread().getName() + "卖第" + count + "张票");
     }
   }
 
@@ -24,6 +27,12 @@ public class MyThread extends Thread {
     t1.start();
     t2.start();
     t3.start();
+
+    // lambda +  Function interface
+    new Thread(() -> {
+      System.out.println(Thread.currentThread().getName() + " sell tickets");
+    }, "t1").start();
+
   }
 
 }
