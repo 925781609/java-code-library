@@ -5,19 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.liuil</groupId>
-  <artifactId>code-libary</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>datastructure</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>code-libary</name>
 
-  <modules>
-    <module>multithread</module>
-    <module>datastructure</module>
-  </modules>
+  <name>datastructure</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.8</java.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
@@ -29,17 +23,6 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>19.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.alibaba.otter</groupId>
-      <artifactId>canal.client</artifactId>
-      <version>1.0.12</version>
-    </dependency>
-
   </dependencies>
 
   <build>
