@@ -4,15 +4,21 @@ package com.liuil.springboot.request;
  * Demo请求
  */
 public class DemoRequest {
+    /**
+     * 参数1
+     */
     private String parameter1;
-    private String parameter2;
+    /**
+     * 颜色
+     */
+    private Color color;
 
     public DemoRequest() {
     }
 
-    public DemoRequest(String parameter1, String parameter2) {
+    public DemoRequest(String parameter1, Color color) {
         this.parameter1 = parameter1;
-        this.parameter2 = parameter2;
+        this.color = color;
     }
 
     public String getParameter1() {
@@ -23,19 +29,12 @@ public class DemoRequest {
         this.parameter1 = parameter1;
     }
 
-    public String getParameter2() {
-        return parameter2;
+    public Color getColor() {
+        return color;
     }
 
-    public void setParameter2(String parameter2) {
-        this.parameter2 = parameter2;
+    public void setColor(Color color) {
+        this.color = color;
     }
 
-    @Override
-    public String toString() {
-        return "DemoRequest{" +
-                "parameter1='" + parameter1 + '\'' +
-                ", parameter2='" + parameter2 + '\'' +
-                '}';
-    }
 }

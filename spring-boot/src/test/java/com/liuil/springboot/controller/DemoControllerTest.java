@@ -1,6 +1,7 @@
 package com.liuil.springboot.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.liuil.springboot.request.Color;
 import com.liuil.springboot.request.DemoRequest;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,7 +51,7 @@ public class DemoControllerTest {
 
         String url = "/post";
 
-        DemoRequest demoRequest = new DemoRequest("1", "2");
+        DemoRequest demoRequest = new DemoRequest("1", Color.RED);
         String json = JSONObject.toJSONString(demoRequest);
 
         mvc.perform(MockMvcRequestBuilders.post(url)
