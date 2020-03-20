@@ -13,6 +13,7 @@
     <modules>
         <module>multi-thread</module>
         <module>data-structure</module>
+        <module>spring-boot</module>
     </modules>
 
     <properties>
@@ -27,7 +28,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <version>4.13</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -45,6 +46,13 @@
                 <artifactId>fastjson</artifactId>
                 <version>1.2.62</version>
                 <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
