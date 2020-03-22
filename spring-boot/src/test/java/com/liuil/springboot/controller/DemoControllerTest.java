@@ -34,13 +34,10 @@ public class DemoControllerTest {
 
     @Test
     public void testGetMethod() throws Exception {
-        String url = "/get";
+        String url = "/get2";
 
-        String content = "?parameter1=1&parameter1=2";
         mvc.perform(MockMvcRequestBuilders.get(url)
-                .param("parameter1", "1")
-                .param("parameter1", "2")
-        )
+                .param("parameter1", "1"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
 
@@ -55,7 +52,7 @@ public class DemoControllerTest {
         String json = JSONObject.toJSONString(demoRequest);
 
         mvc.perform(MockMvcRequestBuilders.post(url)
-                .accept(MediaType.APPLICATION_JSON_UTF8)
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(json) //传json参数
         )
                 .andExpect(MockMvcResultMatchers.status().isOk())
