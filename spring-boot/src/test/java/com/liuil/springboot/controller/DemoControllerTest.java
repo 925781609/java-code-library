@@ -37,7 +37,8 @@ public class DemoControllerTest {
         String url = "/get2";
 
         mvc.perform(MockMvcRequestBuilders.get(url)
-                .param("parameter1", "1"))
+                .param("parameter1", "1")
+                .param("color", "red"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
 
@@ -53,7 +54,8 @@ public class DemoControllerTest {
 
         mvc.perform(MockMvcRequestBuilders.post(url)
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
-                .content(json) //传json参数
+                //传json参数
+                .content(json)
         )
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());

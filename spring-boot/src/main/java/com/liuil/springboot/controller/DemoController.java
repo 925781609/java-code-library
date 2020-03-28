@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @RestController
 public class DemoController {
-    @GetMapping(value = {"/{id}/get", "/get2"})
+    @RequestMapping(value = {"/{id}/get", "/get2"},  method = RequestMethod.GET)
     public String test(@PathVariable Optional<Integer> id,
                        @RequestParam String parameter1,
                        @RequestParam(required = false) Color color) {
