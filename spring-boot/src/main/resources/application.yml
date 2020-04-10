@@ -2,3 +2,7 @@ spring:
   mvc:
     servlet:
       load-on-startup: 1
+
+server:
+  tomcat:
+    max-threads: 1

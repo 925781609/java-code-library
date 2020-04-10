@@ -1,0 +1,15 @@
+hbase:
+  config:
+    hbase:
+      zookeeper:
+        quorum: #换成实际使用的zookeeper地址, 没有端口号#
+      client:
+        retries:
+          number: 2
+        operation:
+          timeout: 30000
+      rpc:
+        timeout: 30000
+      connection:
+        threads:
+          max: 512
