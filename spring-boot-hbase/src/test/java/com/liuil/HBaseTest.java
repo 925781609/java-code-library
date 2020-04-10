@@ -25,19 +25,25 @@ import java.util.Map;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {Application.class})
 public class HBaseTest {
-    private static final String TABLE_NAME = "hb_chaos_feed";
-    private static final byte[] FAMILY = "feed".getBytes();
+    private static final String TABLE_NAME = "table_name";
+    /**
+     * HBase列簇名
+     */
+    private static final byte[] FAMILY = "family_name".getBytes();
 
+    /**
+     * 列名
+     */
+    private static final byte[] ID = "id".getBytes();
     private static final byte[] UID = "uid".getBytes();
-    private static byte[] ID = "id".getBytes();
-    private static byte[] TYPE = "type".getBytes();
-    private static byte[] CONTENT = "content".getBytes();
+    private static final byte[] TYPE = "type".getBytes();
+    private static final byte[] CONTENT = "content".getBytes();
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
     /**
-     * HBase scan测试用例程序
+     * HBase scan
      */
     @Test
     public void testScan() {
