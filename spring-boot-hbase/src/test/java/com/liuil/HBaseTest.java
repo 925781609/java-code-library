@@ -132,7 +132,6 @@ public class HBaseTest {
 
                 List<Cell> ceList = result.listCells();
                 Map<String, Object> map = new HashMap<String, Object>();
-                Map<String, Map<String, Object>> returnMap = new HashMap<String, Map<String, Object>>();
                 String row = "";
                 if (ceList != null && ceList.size() > 0) {
                     for (Cell cell : ceList) {
