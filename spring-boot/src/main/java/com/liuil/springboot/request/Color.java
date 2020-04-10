@@ -4,11 +4,11 @@ import lombok.AccessLevel;
 import lombok.Getter;
 
 public enum Color {
-    RED("mm"),
+    RED("red"),
 
-    YELLOW("nn"),
+    YELLOW("yellow"),
 
-    BLUE("oo");
+    BLUE("blue");
 
     @Getter(AccessLevel.PRIVATE)
     private String value;
